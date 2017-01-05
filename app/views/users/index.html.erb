@@ -1,0 +1,18 @@
+<center>
+<div class="module top">
+    <h2>Learn about different cities from other people's travel experiences.</h2>
+</div>
+
+<center>
+
+<% if admin %>
+<div class="container">
+  <h2>Admin Tools</h2>
+  <br>
+  <h3><%= link_to "All Posts", posts_path %>
+  <h3>Users:</h3>
+  <% @users.each do |user| %>
+  <h3><%= link_to user.name, user_path(user) %> </h3>
+  <% end %>
+</div>
+<% end %>

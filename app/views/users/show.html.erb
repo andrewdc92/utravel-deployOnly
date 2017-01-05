@@ -1,0 +1,26 @@
+<center><div class="card" id="userShow">
+  <div class="card-block">
+  <h4> Username: <%= @user.name %></h4>
+  <br>
+  Most recent city of residence: <%= @user.current_city %>
+  <br>
+  <h5>Joined <%= @user.created_at.localtime.to_formatted_s(:long_ordinal) %></h5>
+  <% if @user == current_user %>
+    <%= button_to "Edit Profile", edit_user_path, method: "get", class: "btn btn-success" %>
+    <br>
+  <% end %>
+  <br>
+  <% if current_user && admin %>
+    <%= button_to 'Remove User', destroy_user_path(@user), class: "btn btn-success", method: :delete, data: {confirm: "Are you sure you want to delete #{ @user.name }?"}%>
+  <% end %>
+  <br>
+  <h5>Posts:</h5>
+  <% if @user.posts.length  < 1 %>
+    <%= @user == current_user ? "You have no posts yet!" : "This user has no posts" %>
+  <% end %>
+  <% @user.posts.sort_by{|post| [post['updated_at']]}.reverse.each do |post| %>
+    <h3> <%= link_to post.title, user_post_path(@user, post) %> </h3>
+  <% end %>
+
+  </div>
+</div>

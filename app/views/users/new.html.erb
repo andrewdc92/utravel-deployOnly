@@ -1,0 +1,22 @@
+<div class="m-x-auto newuser" id="signupCard">
+<h3 class="card-title">Sign Up</h3>
+<%= form_for @user do |f| %>
+  <div>
+    <h5>Full Name</h5>
+    <span class="label label-default"></span><%= f.text_field :name, :class => "fnameSup", placeholder: "Full Name" %>
+  </div>
+  <div>
+    <h5>Current City</h5>
+    <span class="label label-default"></span><%= f.text_field :current_city, :class => "citySup", placeholder: "Current City" %>
+  </div>
+  <div>
+    <h5>Email</h5>
+    <span class="label label-default"></span><%= f.text_field :email, :class => "emailSup", placeholder: "Email" %>
+  </div>
+  <div>
+    <h5>Password</h5>
+    <span class="label label-default"></span><%= f.password_field :password, :class => "pwordSup", placeholder: "Password" %>
+  </div>
+  <%= f.submit "Sign Up", :class => 'btn-primary' %>
+<% end %>
+</div>

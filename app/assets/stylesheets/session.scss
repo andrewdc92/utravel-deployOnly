@@ -1,0 +1,43 @@
+// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #743f3f;
+  height: 500px;
+}
+
+#logincard{
+  margin: 0 auto;
+  width: 40em;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #23527c;
+}
+.card-title{
+  padding: 20px;
+  text-decoration: underline;
+}
+input.login, input.password {
+      width: 15em;
+      padding-left: 30px;
+      -webkit-box-shadow: 0 0 0 100px #fff inset;
+      -moz-box-shadow: 0 0 0 100px #fff inset;
+      box-shadow: 0 0 0 100px #fff inset;
+      border-radius: 5px;
+  }
+input.btn-primary{
+  width: 9em;
+  border-radius: 10px;
+}
+
+.newuser {
+margin: auto;
+background-color: grey;
+padding: 20px;
+}
+
+.label {
+  font-size: 20px;
+}
