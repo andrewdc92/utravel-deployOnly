@@ -1,27 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a copy of my Vagabond app, stripped of the parent directory for easy deployment to Heroku. 
+The project was a 5 day group project where I worked with three other team members.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Trello Board
-https://trello.com/b/DGVH8EUT/vagabond
+To see the original commit history and collaborators, go here https://github.com/andrewdc92/Vagabond
