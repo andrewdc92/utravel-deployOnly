@@ -1,20 +1,25 @@
 
 
-
+<div class="m-x-auto newuser" id="signupCard">
+<h3 class="card-title">Edit User</h3>
 <% if @user.id == current_user.id %>
-  <%= form_for @user do |f| %>
-    <div>
-      <%= f.text_field :name, placeholder: "Full Name" %>
-    </div>
-    <div>
-      <%= f.text_field :current_city, placeholder: "Current City" %>
-    </div>
-    <div>
-      <%= f.text_field :email, placeholder: "Email" %>
-    </div>
+<%= form_for @user do |f| %>
+  <div>
+    <h5>Edit Name</h5>
+    <span class="label label-default"></span><%= f.text_field :name, :class => "fnameSup", placeholder: "Full Name" %>
+  </div>
+  <div>
+    <h5>Edit Current City</h5>
+    <span class="label label-default"></span><%= f.text_field :current_city, :class => "citySup", placeholder: "Current City" %>
+  </div>
+  <div>
+    <h5>Edit Email</h5>
+    <span class="label label-default"></span><%= f.text_field :email, :class => "emailSup", placeholder: "Email" %>
+  </div>
 
-    <%= f.submit "Save User Changes" %>
-  <% end %>
-<% else %>
-  Something messed up :(
+  <%= f.submit "Save User Changes", :class => 'btn-primary', :id => 'saveChange' %>
 <% end %>
+<% else %>
+Something messed up :(
+<% end %>
+</div>
