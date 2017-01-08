@@ -11,12 +11,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-static-top">
       <div class="container-fluid">
-        <div class="navbar-header">
           <p class="navbar-brand"><%= link_to "üTravel", root_path %></p>
-        </div>
-
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
           <li><%= link_to "Profile", user_path(current_user) %></li>
@@ -31,7 +28,6 @@
           <% end %>
         </ul>
       </div>
-
     </nav>
 
     <% flash.each do |name, msg| %>
